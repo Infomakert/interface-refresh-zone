@@ -136,7 +136,6 @@ All colors MUST be HSL.
   
   .logo-stroke-animation {
     position: relative;
-    filter: drop-shadow(0 0 10px hsl(12, 85%, 65%)) drop-shadow(0 0 20px hsl(12, 85%, 65%));
     animation: logoReveal 3s ease-in-out forwards;
   }
   
@@ -158,15 +157,15 @@ All colors MUST be HSL.
   @keyframes logoReveal {
     0% {
       opacity: 0;
-      filter: brightness(0) drop-shadow(0 0 10px hsl(12, 85%, 65%));
+      filter: brightness(0);
     }
     20% {
       opacity: 1;
-      filter: brightness(0) drop-shadow(0 0 10px hsl(12, 85%, 65%));
+      filter: brightness(0);
     }
     100% {
       opacity: 1;
-      filter: brightness(1) drop-shadow(0 0 10px hsl(12, 85%, 65%)) drop-shadow(0 0 20px hsl(12, 85%, 65%));
+      filter: brightness(1);
     }
   }
   
