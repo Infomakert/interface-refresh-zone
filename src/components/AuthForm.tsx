@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { QrCode, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 
 interface AuthInputProps {
   label: string;
@@ -72,25 +73,44 @@ const AuthInput = ({
   );
 };
 
-export const AuthForm = () => {
+interface AuthFormProps {
+  onProcessing: () => void;
+}
+
+export const AuthForm = ({ onProcessing }: AuthFormProps) => {
   const [apiKey, setApiKey] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic validation
+    const hasApiKey = apiKey.trim().length > 0;
+    const hasCredentials = username.trim().length > 0 && password.trim().length > 0;
+    
+    if (!hasApiKey && !hasCredentials) {
+      toast({
+        title: "Authentication Required",
+        description: "Please provide either an API Key or Username/Password",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Brief loading state before processing screen
+    await new Promise(resolve => setTimeout(resolve, 800));
     
     setIsLoading(false);
-    console.log("Auth data:", { apiKey, username, password });
+    onProcessing();
   };
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md animate-fade-in">
       <div className="text-center mb-8">
         <h1 className="text-2xl font-bold text-foreground mb-2">Authorize Reader</h1>
         <p className="text-muted-foreground">
@@ -135,7 +155,7 @@ export const AuthForm = () => {
           className="w-full mt-8 h-12"
           disabled={isLoading}
         >
-          {isLoading ? "Authorizing..." : "Login"}
+          {isLoading ? "Validating..." : "Login"}
         </Button>
       </form>
 
