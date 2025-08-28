@@ -8,45 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* RedPay Brand Colors */
-    --background: 240 10% 97%;
-    --foreground: 240 10% 9%;
+    /* abcY Pay Brand Colors - Coral Red Theme */
+    --background: 15 15% 97%;
+    --foreground: 15 10% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 9%;
+    --card-foreground: 15 10% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 9%;
+    --popover-foreground: 15 10% 9%;
 
-    /* Purple-Teal Brand Gradient */
-    --primary: 280 100% 60%;
+    /* Coral Red Brand Colors */
+    --primary: 12 85% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-gradient: 280 100% 60%;
-    --accent-gradient: 180 100% 50%;
+    --primary-gradient: 12 85% 65%;
+    --accent-gradient: 15 90% 70%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 9%;
+    --secondary: 15 5% 96%;
+    --secondary-foreground: 15 10% 9%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 15 5% 96%;
+    --muted-foreground: 15 4% 46%;
 
-    --accent: 180 100% 50%;
+    --accent: 12 85% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 280 100% 60%;
+    --border: 15 6% 90%;
+    --input: 15 6% 90%;
+    --ring: 12 85% 65%;
 
     --radius: 0.75rem;
 
-    /* Custom RedPay Design Tokens */
-    --gradient-brand: linear-gradient(135deg, hsl(280, 100%, 60%), hsl(180, 100%, 50%));
-    --gradient-subtle: linear-gradient(180deg, hsl(240, 10%, 99%), hsl(240, 10%, 97%));
-    --shadow-card: 0 4px 20px -4px hsl(280, 100%, 60%, 0.1);
-    --shadow-input: 0 2px 8px -2px hsl(280, 100%, 60%, 0.08);
+    /* Custom abcY Pay Design Tokens */
+    --gradient-brand: linear-gradient(135deg, hsl(12, 85%, 65%), hsl(15, 90%, 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(15, 15%, 99%), hsl(15, 15%, 97%));
+    --shadow-card: 0 4px 20px -4px hsl(12, 85%, 65%, 0.1);
+    --shadow-input: 0 2px 8px -2px hsl(12, 85%, 65%, 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
