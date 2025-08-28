@@ -1,6 +1,5 @@
 import { CheckCircle, Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ProcessingScreenProps {
   onComplete?: () => void;
@@ -8,7 +7,6 @@ interface ProcessingScreenProps {
 
 export const ProcessingScreen = ({ onComplete }: ProcessingScreenProps) => {
   const [stage, setStage] = useState<'processing' | 'success'>('processing');
-  const { t } = useLanguage();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -53,16 +51,16 @@ export const ProcessingScreen = ({ onComplete }: ProcessingScreenProps) => {
           {stage === 'processing' ? (
             <div className="flex flex-col items-center space-y-4">
               <Loader2 className="w-8 h-8 text-teal-400 animate-spin-slow" />
-              <p className="text-white text-lg font-medium">{t('processing.title')}</p>
-              <p className="text-gray-400 text-sm">{t('processing.subtitle')}</p>
+              <p className="text-white text-lg font-medium">Processing Authentication...</p>
+              <p className="text-gray-400 text-sm">Please wait while we verify your credentials</p>
             </div>
           ) : (
             <div className="flex flex-col items-center space-y-4 animate-scale-in">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center">
                 <CheckCircle className="w-8 h-8 text-green-400" />
               </div>
-              <p className="text-white text-lg font-medium">{t('processing.success')}</p>
-              <p className="text-gray-400 text-sm">{t('processing.redirect')}</p>
+              <p className="text-white text-lg font-medium">Authentication Successful!</p>
+              <p className="text-gray-400 text-sm">Redirecting to dashboard...</p>
             </div>
           )}
         </div>
@@ -95,7 +93,7 @@ export const ProcessingScreen = ({ onComplete }: ProcessingScreenProps) => {
       {/* Footer */}
       <div className="absolute bottom-8 text-center">
         <p className="text-gray-500 text-xs">
-          {t('processing.footer')}
+          Secure connection established • 256-bit encryption
         </p>
       </div>
     </div>
