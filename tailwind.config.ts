@@ -75,6 +75,7 @@ export default {
 				'gradient-sunset': 'var(--gradient-sunset)',
 				'gradient-ocean': 'var(--gradient-ocean)',
 				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-royal': 'var(--gradient-royal)',
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',
