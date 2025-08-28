@@ -16,23 +16,28 @@ const languages: { code: Language; name: string; nativeName: string }[] = [
 export const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
 
+  const currentLanguage = languages.find(lang => lang.code === language);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button 
-          variant="ghost" 
-          size="icon"
-          className="h-8 w-8 rounded-full hover:bg-white/10 transition-colors"
+          variant="outline" 
+          className="h-10 px-3 bg-white/95 backdrop-blur-sm border border-white/20 hover:bg-white text-foreground shadow-lg transition-all hover:shadow-xl"
         >
-          <Globe className="h-4 w-4 text-muted-foreground" />
+          <Globe className="h-4 w-4 mr-2" />
+          <span className="font-medium">{currentLanguage?.nativeName}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
+      <DropdownMenuContent 
+        align="end" 
+        className="w-48 bg-white/95 backdrop-blur-sm border border-white/20 shadow-xl z-50"
+      >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => setLanguage(lang.code)}
-            className="flex items-center justify-between cursor-pointer"
+            className="flex items-center justify-between cursor-pointer hover:bg-primary/10 transition-colors"
           >
             <div className="flex flex-col">
               <span className="text-sm font-medium">{lang.nativeName}</span>

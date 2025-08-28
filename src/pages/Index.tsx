@@ -23,14 +23,24 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-subtle flex items-center justify-center p-4">
-      <div className="absolute top-4 right-4 z-10">
+    <div className="min-h-screen bg-gradient-subtle flex flex-col">
+      {/* Top Header with Language Selector */}
+      <div className="w-full flex justify-between items-center p-6">
+        <div className="flex items-center space-x-3">
+          <div className="text-2xl font-bold">
+            <span className="bg-gradient-brand bg-clip-text text-transparent">RedPay</span>
+          </div>
+        </div>
         <LanguageSelector />
       </div>
-      <div className="w-full max-w-md">
-        <div className="bg-card rounded-2xl shadow-card backdrop-blur-sm border border-border/50 p-8">
-          <RedPayLogo />
-          <AuthForm onProcessing={handleProcessing} />
+
+      {/* Main Content */}
+      <div className="flex-1 flex items-center justify-center p-4">
+        <div className="w-full max-w-md">
+          <div className="bg-card rounded-2xl shadow-card backdrop-blur-sm border border-border/50 p-8">
+            <RedPayLogo />
+            <AuthForm onProcessing={handleProcessing} />
+          </div>
         </div>
       </div>
     </div>
