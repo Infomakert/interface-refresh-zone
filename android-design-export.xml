@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RedPay App Design System Export -->
+<!-- Generated from React/Tailwind design system -->
+
+<design-system>
+  <metadata>
+    <name>RedPay Mobile Interface</name>
+    <version>1.0</version>
+    <platform>Android</platform>
+    <theme>Dark Coral Brand</theme>
+    <export-date>2024-12-19</export-date>
+  </metadata>
+
+  <!-- Brand Colors (HSL Format) -->
+  <colors>
+    <!-- Primary Brand Colors -->
+    <color name="primary" value="#e85a4f" hsl="12, 85%, 65%" />
+    <color name="primary_foreground" value="#ffffff" hsl="0, 0%, 100%" />
+    <color name="accent" value="#e85a4f" hsl="12, 85%, 65%" />
+    <color name="accent_foreground" value="#ffffff" hsl="0, 0%, 100%" />
+    
+    <!-- Background Colors -->
+    <color name="background" value="#0f0f0f" hsl="0, 0%, 6%" />
+    <color name="foreground" value="#f2f2f2" hsl="0, 0%, 95%" />
+    <color name="card" value="#1a1a1a" hsl="0, 0%, 10%" />
+    <color name="card_foreground" value="#f2f2f2" hsl="0, 0%, 95%" />
+    
+    <!-- Surface Colors -->
+    <color name="secondary" value="#262626" hsl="0, 0%, 15%" />
+    <color name="secondary_foreground" value="#e6e6e6" hsl="0, 0%, 90%" />
+    <color name="muted" value="#262626" hsl="0, 0%, 15%" />
+    <color name="muted_foreground" value="#b3b3b3" hsl="0, 0%, 70%" />
+    
+    <!-- Border and Input Colors -->
+    <color name="border" value="#333333" hsl="0, 0%, 20%" />
+    <color name="input" value="#262626" hsl="0, 0%, 15%" />
+    <color name="ring" value="#e85a4f" hsl="12, 85%, 65%" />
+    
+    <!-- Status Colors -->
+    <color name="destructive" value="#dc2626" hsl="0, 84%, 60%" />
+    <color name="destructive_foreground" value="#ffffff" hsl="0, 0%, 100%" />
+  </colors>
+
+  <!-- Gradients -->
+  <gradients>
+    <gradient name="brand" type="linear" angle="135">
+      <stop position="0%" color="#e85a4f" />
+      <stop position="100%" color="#ff8c42" />
+    </gradient>
+    <gradient name="coral" type="linear" angle="135">
+      <stop position="0%" color="#e85a4f" />
+      <stop position="100%" color="#ff8c42" />
+    </gradient>
+    <gradient name="cool" type="linear" angle="135">
+      <stop position="0%" color="#e85a4f" />
+      <stop position="50%" color="#b968c7" />
+      <stop position="100%" color="#4fb3d9" />
+    </gradient>
+    <gradient name="sunset" type="linear" angle="135">
+      <stop position="0%" color="#e85a4f" />
+      <stop position="50%" color="#ffaa44" />
+      <stop position="100%" color="#e56b6f" />
+    </gradient>
+    <gradient name="ocean" type="linear" angle="135">
+      <stop position="0%" color="#4fb3d9" />
+      <stop position="50%" color="#5fb3d4" />
+      <stop position="100%" color="#e85a4f" />
+    </gradient>
+    <gradient name="subtle" type="linear" angle="180">
+      <stop position="0%" color="#141414" />
+      <stop position="100%" color="#0f0f0f" />
+    </gradient>
+  </gradients>
+
+  <!-- Typography -->
+  <typography>
+    <font-family name="primary" value="system-ui, sans-serif" />
+    <text-sizes>
+      <size name="xs" value="12sp" />
+      <size name="sm" value="14sp" />
+      <size name="base" value="16sp" />
+      <size name="lg" value="18sp" />
+      <size name="xl" value="20sp" />
+      <size name="2xl" value="24sp" />
+      <size name="3xl" value="30sp" />
+    </text-sizes>
+    <font-weights>
+      <weight name="normal" value="400" />
+      <weight name="medium" value="500" />
+      <weight name="semibold" value="600" />
+      <weight name="bold" value="700" />
+    </font-weights>
+  </typography>
+
+  <!-- Spacing System -->
+  <spacing>
+    <unit name="xs" value="4dp" />
+    <unit name="sm" value="8dp" />
+    <unit name="md" value="16dp" />
+    <unit name="lg" value="24dp" />
+    <unit name="xl" value="32dp" />
+    <unit name="2xl" value="48dp" />
+    <unit name="3xl" value="64dp" />
+  </spacing>
+
+  <!-- Border Radius -->
+  <radius>
+    <size name="sm" value="4dp" />
+    <size name="md" value="8dp" />
+    <size name="lg" value="12dp" />
+    <size name="xl" value="16dp" />
+  </radius>
+
+  <!-- Shadows -->
+  <shadows>
+    <shadow name="card" 
+            blur="20dp" 
+            offset-y="4dp" 
+            color="#e85a4f33" />
+    <shadow name="input" 
+            blur="8dp" 
+            offset-y="2dp" 
+            color="#e85a4f1a" />
+  </shadows>
+
+  <!-- Component Specifications -->
+  <components>
+    
+    <!-- Authentication Form -->
+    <component name="auth_form">
+      <dimensions width="match_parent" height="wrap_content" />
+      <padding horizontal="24dp" vertical="32dp" />
+      <background color="background" />
+      
+      <elements>
+        <element name="title">
+          <text_size value="24sp" />
+          <font_weight value="bold" />
+          <color value="foreground" />
+          <margin_bottom value="8dp" />
+        </element>
+        
+        <element name="subtitle">
+          <text_size value="16sp" />
+          <color value="muted_foreground" />
+          <margin_bottom value="32dp" />
+        </element>
+        
+        <element name="input_field">
+          <height value="48dp" />
+          <background color="transparent" />
+          <border_bottom width="2dp" color="border" />
+          <padding_vertical value="12dp" />
+          <margin_bottom value="24dp" />
+          <text_color value="foreground" />
+          <hint_color value="muted_foreground" />
+          
+          <focus_state>
+            <border_color value="primary" />
+            <shadow name="input" />
+          </focus_state>
+        </element>
+        
+        <element name="primary_button">
+          <height value="48dp" />
+          <background gradient="coral" />
+          <corner_radius value="12dp" />
+          <text_color value="white" />
+          <font_weight value="semibold" />
+          <shadow name="card" />
+          <margin_top value="32dp" />
+          
+          <press_state>
+            <alpha value="0.9" />
+            <scale value="0.98" />
+          </press_state>
+        </element>
+      </elements>
+    </component>
+
+    <!-- Loading Screen -->
+    <component name="loading_screen">
+      <dimensions width="match_parent" height="match_parent" />
+      <background color="background" />
+      <gravity value="center" />
+      
+      <elements>
+        <element name="logo">
+          <width value="120dp" />
+          <height value="120dp" />
+          <margin_bottom value="24dp" />
+          
+          <animation name="logo_reveal" duration="3000ms">
+            <keyframe time="0%" opacity="0" brightness="0" />
+            <keyframe time="20%" opacity="1" brightness="0" />
+            <keyframe time="100%" opacity="1" brightness="1" />
+          </animation>
+        </element>
+        
+        <element name="loading_text">
+          <text_size value="18sp" />
+          <color value="muted_foreground" />
+          <font_weight value="medium" />
+        </element>
+      </elements>
+    </component>
+
+    <!-- Input Field with Icon -->
+    <component name="icon_input">
+      <height value="48dp" />
+      <position value="relative" />
+      
+      <elements>
+        <element name="input">
+          <background color="transparent" />
+          <border_bottom width="2dp" color="border" />
+          <padding_end value="40dp" />
+          <text_color value="foreground" />
+        </element>
+        
+        <element name="icon">
+          <width value="20dp" />
+          <height value="20dp" />
+          <position value="absolute" />
+          <align_parent_end value="true" />
+          <center_vertical value="true" />
+          <tint color="primary" />
+        </element>
+      </elements>
+    </component>
+
+    <!-- Divider -->
+    <component name="divider">
+      <height value="1dp" />
+      <background color="border" />
+      <margin_vertical value="16dp" />
+      
+      <text_overlay>
+        <text value="OR" />
+        <background color="background" />
+        <padding_horizontal value="16dp" />
+        <text_size value="14sp" />
+        <color value="muted_foreground" />
+        <font_weight value="medium" />
+      </text_overlay>
+    </component>
+
+  </components>
+
+  <!-- Animation Specifications -->
+  <animations>
+    <animation name="button_press">
+      <duration value="150ms" />
+      <interpolator value="ease_out" />
+      <property name="scale" from="1.0" to="0.98" />
+      <property name="alpha" from="1.0" to="0.9" />
+    </animation>
+    
+    <animation name="input_focus">
+      <duration value="300ms" />
+      <interpolator value="ease_in_out" />
+      <property name="border_color" to="primary" />
+    </animation>
+    
+    <animation name="logo_reveal">
+      <duration value="3000ms" />
+      <interpolator value="ease_in_out" />
+      <keyframes>
+        <keyframe time="0%">
+          <property name="opacity" value="0" />
+          <property name="brightness" value="0" />
+        </keyframe>
+        <keyframe time="20%">
+          <property name="opacity" value="1" />
+          <property name="brightness" value="0" />
+        </keyframe>
+        <keyframe time="100%">
+          <property name="opacity" value="1" />
+          <property name="brightness" value="1" />
+        </keyframe>
+      </keyframes>
+    </animation>
+    
+    <animation name="stroke_reveal">
+      <duration value="3000ms" />
+      <interpolator value="ease_in_out" />
+      <property name="translate_x" from="-100%" to="100%" />
+    </animation>
+  </animations>
+
+  <!-- Layout Specifications -->
+  <layouts>
+    <layout name="auth_screen">
+      <type value="LinearLayout" />
+      <orientation value="vertical" />
+      <gravity value="center" />
+      <padding value="24dp" />
+      <background color="background" />
+    </layout>
+    
+    <layout name="loading_screen">
+      <type value="FrameLayout" />
+      <gravity value="center" />
+      <background color="background" />
+    </layout>
+    
+    <layout name="input_container">
+      <type value="RelativeLayout" />
+      <margin_bottom value="24dp" />
+    </layout>
+  </layouts>
+
+  <!-- Design Tokens -->
+  <design_tokens>
+    <token name="transition_smooth" value="cubic-bezier(0.4, 0, 0.2, 1)" />
+    <token name="draw_duration" value="2s" />
+    <token name="draw_delay" value="0.5s" />
+  </design_tokens>
+
+</design-system>
