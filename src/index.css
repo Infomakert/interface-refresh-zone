@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* abcY Pay Brand Colors - Coral Red Theme */
-    --background: 15 15% 97%;
-    --foreground: 15 10% 9%;
+    /* abcY Pay Brand Colors - Black Background Theme */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 15 10% 9%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 15 10% 9%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
     /* Coral Red Brand Colors */
     --primary: 12 85% 65%;
@@ -24,11 +24,11 @@ All colors MUST be HSL.
     --primary-gradient: 12 85% 65%;
     --accent-gradient: 15 90% 70%;
 
-    --secondary: 15 5% 96%;
-    --secondary-foreground: 15 10% 9%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 15 5% 96%;
-    --muted-foreground: 15 4% 46%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
     --accent: 12 85% 65%;
     --accent-foreground: 0 0% 100%;
@@ -36,21 +36,21 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 15 6% 90%;
-    --input: 15 6% 90%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
     --ring: 12 85% 65%;
 
     --radius: 0.75rem;
 
     /* Custom abcY Pay Design Tokens */
     --gradient-brand: linear-gradient(135deg, hsl(12, 85%, 65%), hsl(15, 90%, 70%));
-    --gradient-subtle: linear-gradient(180deg, hsl(15, 15%, 99%), hsl(15, 15%, 97%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 8%), hsl(0, 0%, 6%));
     --gradient-cool: linear-gradient(135deg, hsl(12, 85%, 65%), hsl(280, 70%, 60%), hsl(200, 80%, 55%));
     --gradient-sunset: linear-gradient(135deg, hsl(12, 85%, 65%), hsl(35, 85%, 60%), hsl(320, 70%, 65%));
     --gradient-ocean: linear-gradient(135deg, hsl(200, 80%, 55%), hsl(180, 70%, 60%), hsl(12, 85%, 65%));
     --gradient-neon: linear-gradient(135deg, hsl(12, 85%, 65%), hsl(300, 80%, 65%), hsl(180, 90%, 60%));
-    --shadow-card: 0 4px 20px -4px hsl(12, 85%, 65%, 0.1);
-    --shadow-input: 0 2px 8px -2px hsl(12, 85%, 65%, 0.08);
+    --shadow-card: 0 4px 20px -4px hsl(12, 85%, 65%, 0.2);
+    --shadow-input: 0 2px 8px -2px hsl(12, 85%, 65%, 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
