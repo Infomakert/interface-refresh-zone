@@ -6,11 +6,11 @@ export const RedPayLogo = () => {
       <div className="relative">
         <CheckCircle className="w-8 h-8 text-accent" />
       </div>
-      <div className="text-4xl font-bold">
-        <span className="bg-gradient-brand bg-clip-text text-transparent">
-          edpay
-        </span>
-      </div>
+      <img 
+        src="/lovable-uploads/76a59f3f-50d2-427c-a6b2-0fa574d467e0.png" 
+        alt="abcy Pay" 
+        className="h-8 w-auto"
+      />
     </div>
   );
 };
