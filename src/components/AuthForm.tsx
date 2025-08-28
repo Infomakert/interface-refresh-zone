@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { QrCode, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface AuthInputProps {
   label: string;
@@ -83,6 +84,7 @@ export const AuthForm = ({ onProcessing }: AuthFormProps) => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,8 +95,8 @@ export const AuthForm = ({ onProcessing }: AuthFormProps) => {
     
     if (!hasApiKey && !hasCredentials) {
       toast({
-        title: "Authentication Required",
-        description: "Please provide either an API Key or Username/Password",
+        title: t("auth.required"),
+        description: t("auth.requiredDescription"),
         variant: "destructive",
       });
       return;
@@ -112,39 +114,39 @@ export const AuthForm = ({ onProcessing }: AuthFormProps) => {
   return (
     <div className="w-full max-w-md animate-fade-in">
       <div className="text-center mb-8">
-        <h1 className="text-2xl font-bold text-foreground mb-2">Authorize Reader</h1>
+        <h1 className="text-2xl font-bold text-foreground mb-2">{t("auth.title")}</h1>
         <p className="text-muted-foreground">
-          Generate your API Key on the merchant Portal
+          {t("auth.subtitle")}
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <AuthInput
-          label="API Key"
+          label={t("auth.apiKey")}
           value={apiKey}
           onChange={setApiKey}
-          placeholder="Enter your API key"
+          placeholder={t("auth.apiKeyPlaceholder")}
           showQrIcon
         />
 
         <div className="flex items-center justify-center py-4">
           <div className="flex-1 border-t border-border"></div>
-          <div className="px-4 text-sm text-muted-foreground font-medium">OR</div>
+          <div className="px-4 text-sm text-muted-foreground font-medium">{t("auth.or")}</div>
           <div className="flex-1 border-t border-border"></div>
         </div>
 
         <AuthInput
-          label="Username"
+          label={t("auth.username")}
           value={username}
           onChange={setUsername}
-          placeholder="Enter your username"
+          placeholder={t("auth.usernamePlaceholder")}
         />
 
         <AuthInput
-          label="Password"
+          label={t("auth.password")}
           value={password}
           onChange={setPassword}
-          placeholder="Enter your password"
+          placeholder={t("auth.passwordPlaceholder")}
           showPasswordToggle
         />
 
@@ -155,13 +157,13 @@ export const AuthForm = ({ onProcessing }: AuthFormProps) => {
           className="w-full mt-8 h-12"
           disabled={isLoading}
         >
-          {isLoading ? "Validating..." : "Login"}
+          {isLoading ? t("auth.validating") : t("auth.login")}
         </Button>
       </form>
 
       <div className="mt-8 text-center">
         <p className="text-sm text-muted-foreground">
-          Need help? <button className="text-primary hover:underline font-medium">Contact Support</button>
+          {t("auth.needHelp")} <button className="text-primary hover:underline font-medium">{t("auth.contactSupport")}</button>
         </p>
       </div>
     </div>
