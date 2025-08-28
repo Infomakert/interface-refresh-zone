@@ -125,29 +125,63 @@ All colors MUST be HSL.
   }
 }
 
-/* Stroke Drawing Animation Styles */
+/* Logo Animation Styles */
 @layer components {
-  .stroke-drawing-animation {
-    filter: url(#glow);
+  .logo-animation-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .draw-letter {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw var(--draw-duration) ease-in-out forwards;
+  .logo-stroke-animation {
+    position: relative;
+    filter: drop-shadow(0 0 10px hsl(12, 85%, 65%)) drop-shadow(0 0 20px hsl(12, 85%, 65%));
+    animation: logoReveal 3s ease-in-out forwards;
   }
   
-  @keyframes draw {
+  .logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      hsl(12, 85%, 65%) 2%, 
+      transparent 4%
+    );
+    animation: strokeReveal 3s ease-in-out forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes logoReveal {
     0% {
-      stroke-dashoffset: 1000;
       opacity: 0;
+      filter: brightness(0) drop-shadow(0 0 10px hsl(12, 85%, 65%));
     }
-    10% {
+    20% {
+      opacity: 1;
+      filter: brightness(0) drop-shadow(0 0 10px hsl(12, 85%, 65%));
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(1) drop-shadow(0 0 10px hsl(12, 85%, 65%)) drop-shadow(0 0 20px hsl(12, 85%, 65%));
+    }
+  }
+  
+  @keyframes strokeReveal {
+    0% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(100%);
       opacity: 1;
     }
     100% {
-      stroke-dashoffset: 0;
-      opacity: 1;
+      transform: translateX(100%);
+      opacity: 0;
     }
   }
 }
