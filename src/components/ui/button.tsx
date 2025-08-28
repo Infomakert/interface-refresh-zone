@@ -19,6 +19,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         gradient: "bg-gradient-brand text-white hover:opacity-90 shadow-card transition-all duration-300 hover:shadow-lg hover:scale-[1.02]",
+        cool: "bg-gradient-cool text-white hover:opacity-90 shadow-card transition-all duration-300 hover:shadow-lg hover:scale-[1.02]",
+        sunset: "bg-gradient-sunset text-white hover:opacity-90 shadow-card transition-all duration-300 hover:shadow-lg hover:scale-[1.02]",
+        ocean: "bg-gradient-ocean text-white hover:opacity-90 shadow-card transition-all duration-300 hover:shadow-lg hover:scale-[1.02]",
+        neon: "bg-gradient-neon text-white hover:opacity-90 shadow-card transition-all duration-300 hover:shadow-lg hover:scale-[1.02]",
         auth: "bg-gradient-brand text-white hover:opacity-90 shadow-lg transition-all duration-300 hover:shadow-xl font-semibold",
       },
       size: {

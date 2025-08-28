@@ -71,6 +71,10 @@ export default {
 			backgroundImage: {
 				'gradient-brand': 'var(--gradient-brand)',
 				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-cool': 'var(--gradient-cool)',
+				'gradient-sunset': 'var(--gradient-sunset)',
+				'gradient-ocean': 'var(--gradient-ocean)',
+				'gradient-neon': 'var(--gradient-neon)',
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',
