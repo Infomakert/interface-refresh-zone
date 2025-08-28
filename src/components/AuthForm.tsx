@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { QrCode, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -73,6 +74,7 @@ const AuthInput = ({
 };
 
 export const AuthForm = () => {
+  const navigate = useNavigate();
   const [apiKey, setApiKey] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -87,6 +89,9 @@ export const AuthForm = () => {
     
     setIsLoading(false);
     console.log("Auth data:", { apiKey, username, password });
+    
+    // Navigate to loading screen after successful auth
+    navigate("/loading");
   };
 
   return (

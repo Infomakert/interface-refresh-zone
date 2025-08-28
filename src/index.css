@@ -55,6 +55,10 @@ All colors MUST be HSL.
     --shadow-input: 0 2px 8px -2px hsl(12, 85%, 65%, 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Stroke Drawing Animation */
+    --draw-duration: 2s;
+    --draw-delay: 0.5s;
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -118,5 +122,32 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Stroke Drawing Animation Styles */
+@layer components {
+  .stroke-drawing-animation {
+    filter: url(#glow);
+  }
+  
+  .draw-letter {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw var(--draw-duration) ease-in-out forwards;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 1000;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
   }
 }
